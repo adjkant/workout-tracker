@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 /**
- * TODO
+ * Saves data as CSV
  */
 class CSVAdapter implements DataAdapter {
     private ArrayList<Workout> source;

@@ -6,7 +6,7 @@ import java.util.Date;
 import edu.neu.ccs.workouttracker.exceptions.InvalidWorkoutDataException;
 
 /**
- * TODO
+ * Implements a basic weight workout pattern
  */
 class BasicWorkout implements Workout {
     private String name;

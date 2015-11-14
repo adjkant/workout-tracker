@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 /**
- * TODO
+ * Saves data in a SQLLite Database
  */
 public class SQLAdapter implements DataAdapter {
     private ArrayList<Workout> source;

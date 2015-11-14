@@ -1,7 +1,7 @@
 package edu.neu.ccs.workouttracker.exceptions;
 
 /**
- * TODO
+ * An error caused by bad data in a workout
  */
 public class InvalidWorkoutDataException extends CustomException {
     public InvalidWorkoutDataException(String message) {

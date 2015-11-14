@@ -1,7 +1,7 @@
 package edu.neu.ccs.workouttracker.model;
 
 /**
- * TODO
+ * Represents a method of workout
  */
 public enum WorkoutType {
     ENDURANCE, POWER

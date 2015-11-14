@@ -54,19 +54,26 @@
                 android:fontFamily="15dp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="Last Name"
+                android:text="Workout Type"
                 android:textColor="@color/tf" />
 
-            <EditText
+            <CheckBoxGroup
                 android:id="@+id/FN"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp" >
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Arms"
+                    android:textColor="@color/black" />
+
+            </CheckBoxGroup>
 
         </LinearLayout>
-
-        <!--Row Three Adviser -->
 
         <!--Row Four Appointment -->
 

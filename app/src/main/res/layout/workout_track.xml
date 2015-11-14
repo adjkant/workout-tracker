@@ -6,7 +6,8 @@
     android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:showIn="@layout/workout_track_info">
+    tools:showIn="@layout/workout_track_info"
+    android:weightSum="1">
 
 
     <ProgressBar
@@ -86,7 +87,7 @@
                 android:fontFamily="15dp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="Last Name"
+                android:text=" Name"
                 android:textColor="@color/tf" />
 
             <EditText
@@ -108,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Details"
+        android:text="Difficulty"
         android:id="@+id/textView" />
 
     <Space
@@ -119,6 +120,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ratingBar2" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.26" />
 
     <Space
         android:layout_width="match_parent"
@@ -134,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+        android:text="Effort "
         android:id="@+id/textView2" />
 
     <RatingBar

@@ -35,14 +35,26 @@ class CSVAdapter implements DataAdapter {
         return false;
     }
 
+    // TODO
     @Override
     public boolean saveData() {
-        String workouts = "[";
         for (Workout w : this.source) {
-            String sessions = createSessionsString(w);
-            w.getName();
-            w.getType().toString();
-            w.getAreas().toString();
+            String workout = "";
+            workout += w.getName();
+            workout += "/";
+            workout += w.getType().toString();
+            workout += "/";
+            String areas = "[";
+            for (WorkoutArea a : w.getAreas()) {
+                areas += a.toString();
+                areas += "/";
+            }
+            areas += "]";
+            workout += areas;
+            workout += "/";
+            workout += createSessionsString(w);
+            workout += "\n";
+            //fileOutput.write(workout);
         }
         return false;
     }

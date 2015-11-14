@@ -42,118 +42,118 @@
 
         <!--Row Two Workout Type -->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
-                android:text="Workout Type"
-                android:textColor="@color/tf"
-                android:id="@+id/wTypeTF" />
-
-            <LinearLayout
-                android:id="@+id/types"
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <CheckBox
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Arms"
-                    android:textColor="@color/black"
-                    android:id="@+id/arms" />
-
-                <CheckBox
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Shoulders"
-                    android:textColor="@color/black" />
-                    android:textColor="@color/black"
-                    android:id="@+id/shoulders" />
-
-                <CheckBox
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Core"
-                    android:textColor="@color/black" />
-                    android:textColor="@color/black"
-                    android:id="@+id/core" />
-
-                <CheckBox
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Upper Leg"
-                    android:textColor="@color/black" />
-                    android:text="Upper Legs"
-                    android:textColor="@color/black"
-                    android:id="@+id/upper" />
-
-                <CheckBox
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Lower Leg"
-                    android:textColor="@color/black" />
-                    android:text="Lower Legs"
-                    android:textColor="@color/black"
-                    android:id="@+id/lower" />
-
-                </LinearLayout>
-
-        </LinearLayout>
-
         <!--Row three: Buttons for Power or Endurance-->
 
 
-        <!--Row Four Appointment -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="wrap_content"
+            android:fontFamily="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Workout Type"
+            android:textColor="@color/tf"
+            android:id="@+id/wTypeTF" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:id="@+id/types"
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
+            <CheckBox
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:fontFamily="15dp"
-                android:text="I am here for:"
-                android:textColor="@color/tf" />
+                android:text="Arms"
+                android:textColor="@color/black"
+                android:id="@+id/arms" />
 
-            <RadioGroup
+            <CheckBox
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:fontFamily="15dp"
+                android:text="Shoulders"
+                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:id="@+id/shoulders" />
 
-                <RadioButton
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Appointment"
-                    android:textColor="@color/black" />
+            <CheckBox
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Core"
+                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:id="@+id/core" />
 
-                <RadioButton
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Walk-in"
-                    android:textColor="@color/black"/>
+            <CheckBox
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Upper Leg"
+                android:textColor="@color/black" />
+                android:text="Upper Legs"
+                android:textColor="@color/black"
+                android:id="@+id/upper" />
 
-            </RadioGroup>
-        </LinearLayout>
+            <CheckBox
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Lower Leg"
+                android:textColor="@color/black" />
+                android:text="Lower Legs"
+                android:textColor="@color/black"
+                android:id="@+id/lower" />
+
+            </LinearLayout>
 
     </LinearLayout>
+
+    <!--Row Four Appointment -->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="@dimen/TFwidth"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fontFamily="15dp"-->
+    <!--android:text="I am here for:"-->
+    <!--android:textColor="@color/tf" />-->
+
+    <!--<RadioGroup-->
+    <!--android:layout_width="@dimen/TFwidth"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RadioButton-->
+    <!--android:layout_width="@dimen/TFwidth"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fontFamily="15dp"-->
+    <!--android:text="Appointment"-->
+    <!--android:textColor="@color/black" />-->
+
+    <!--<RadioButton-->
+    <!--android:layout_width="@dimen/TFwidth"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fontFamily="15dp"-->
+    <!--android:text="Walk-in"-->
+    <!--android:textColor="@color/black"/>-->
+
+    <!--</RadioGroup>-->
+    <!--</LinearLayout>-->
 
 </LinearLayout>

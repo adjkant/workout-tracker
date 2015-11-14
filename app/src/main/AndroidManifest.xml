@@ -7,9 +7,15 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/workout_track_info" />
+        <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/workout_track_info" />
+
+        <activity
+            android:name=".workoutlistActivity"
+            android:label="@string/title_activity_workoutlist"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

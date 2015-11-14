@@ -1,65 +1,145 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:padding="10px" android:background="#09C"
-    android:id="@+id/home">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:showIn="@layout/workout_track_info">
 
-    <Space
-        android:layout_width="20px"
-        android:layout_height="20px"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart=true"
-        android:id="@+id/space" />
 
-    <Button
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_session"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/space"
-        android:layout_toRightOf="@+id/space" />
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Workout Complete! "
+        android:textColor="#ff3f63ff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="List of Workouts"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/button5"
-        android:layout_alignRight="@+id/button3"
-        android:layout_alignEnd="@+id/button3" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check Progress"
-        android:id="@+id/button5"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/space"
-        android:layout_alignStart="@+id/space" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Workout"
-        android:id="@+id/button3"
-        android:layout_above="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginBottom="43dp"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Great Job!"
+        android:textColor="#ff3f63ff"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:weightSum="1">
 
-</RelativeLayout>
+        <!--Row One First Name -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Workout Name:"
+                android:textColor="@color/tf" />
+
+            <EditText
+                android:id="@+id/LN"
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+        <!--Row Two Last Name -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Last Name"
+                android:textColor="@color/tf" />
+
+            <EditText
+                android:id="@+id/FN"
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+        <!--Row Three Adviser -->
+
+        <!--Row Four Appointment -->
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Details"
+        android:id="@+id/textView" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar2" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar" />
+
+</LinearLayout>

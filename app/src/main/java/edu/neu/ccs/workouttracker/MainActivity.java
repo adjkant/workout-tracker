@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,11 +21,20 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-    }
+/**
+        ArrayAdapter<int> myAdapter = new ArrayAdapter<int>(
+                this,
+                android.R.layout.simple_list_item_1,myIntArray);
 
+        ListView myList = (ListView)
+                findViewById((R.id.listView);
+        myList.setAdapter(myAdapter);
+ **/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -40,10 +40,6 @@
 
         </LinearLayout>
 
-        <!--Row Two Workout Type -->
-
-        <!--Row three: Buttons for Power or Endurance-->
-
 
     </LinearLayout>
 
@@ -64,7 +60,7 @@
             android:id="@+id/wTypeTF"
             android:layout_gravity="top" />
 
-        <LinearLayout
+        <Spinner
             android:paddingTop="20dp"
             android:id="@+id/types"
             android:layout_width="@dimen/TFwidth"
@@ -117,11 +113,62 @@
                 android:textColor="@color/black"
                 android:id="@+id/lower" />
 
-            </LinearLayout>
+            </Spinner>
 
     </LinearLayout>
 
-    <!--Row Four Appointment -->
+    <!--Row Three Power vs. Endurance -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="match_parent"
+            android:text="Power"
+            android:textColor="@color/blue"
+            android:id="@+id/PowerButton"/>
+
+        <Button
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="match_parent"
+            android:text="Endurance"
+            android:id="@+id/EnduranceButton"/>
+
+    </LinearLayout>
+
+    <!-- if Power is selected-->
+    <LinearLayout
+        android:layout_width="@dimen/TFwidth"
+        android:layout_height="match_parent"
+        android:id="@+id/power"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="your last weights were"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- if Endurance is selected-->
+    <LinearLayout
+        android:layout_width="@dimen/TFwidth"
+        android:layout_height="match_parent"
+        android:id="@+id/endurance"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="your last weights were"
+            android:visibility="gone"/>
+
+    </LinearLayout>
 
     <!--<LinearLayout-->
     <!--android:layout_width="wrap_content"-->

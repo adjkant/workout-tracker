@@ -59,11 +59,10 @@
                 android:id="@+id/wTypeTF" />
 
             <CheckBoxGroup
-                android:id="@+id/FN"
+                android:id="@+id/types"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" >
+                android:orientation="vertical">
 
                 <CheckBox
                     android:layout_width="@dimen/TFwidth"
@@ -71,7 +70,7 @@
                     android:fontFamily="15dp"
                     android:text="Arms"
                     android:textColor="@color/black"
-                    android:id="@id/arms" />
+                    android:id="@+id/arms" />
 
                 <CheckBox
                     android:layout_width="@dimen/TFwidth"
@@ -104,6 +103,9 @@
             </CheckBoxGroup>
 
         </LinearLayout>
+
+        <!--Row three: Buttons for Power or Endurance-->
+
 
         <!--Row Four Appointment -->
 

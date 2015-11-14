@@ -58,7 +58,7 @@
                 android:textColor="@color/tf"
                 android:id="@+id/wTypeTF" />
 
-            <CheckBoxGroup
+            <LinearLayout
                 android:id="@+id/types"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
@@ -78,6 +78,8 @@
                     android:fontFamily="15dp"
                     android:text="Shoulders"
                     android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:id="@+id/shoulders" />
 
                 <CheckBox
                     android:layout_width="@dimen/TFwidth"
@@ -85,6 +87,8 @@
                     android:fontFamily="15dp"
                     android:text="Core"
                     android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:id="@+id/core" />
 
                 <CheckBox
                     android:layout_width="@dimen/TFwidth"
@@ -92,6 +96,9 @@
                     android:fontFamily="15dp"
                     android:text="Upper Leg"
                     android:textColor="@color/black" />
+                    android:text="Upper Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/upper" />
 
                 <CheckBox
                     android:layout_width="@dimen/TFwidth"
@@ -99,8 +106,11 @@
                     android:fontFamily="15dp"
                     android:text="Lower Leg"
                     android:textColor="@color/black" />
+                    android:text="Lower Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/lower" />
 
-            </CheckBoxGroup>
+                </LinearLayout>
 
         </LinearLayout>
 

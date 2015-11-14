@@ -5,11 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.Arrays;
-import java.util.List;
-
-import butterknife.ButterKnife;
-
 /**
  * Created by NJ on 11/14/15.
  */

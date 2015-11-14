@@ -7,16 +7,18 @@
     android:padding="20dp">
 
 
+    <!-- Screen name-->
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/topic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="Welcome to CCIS Advising!"
+        android:text="Add a new Workout"
         android:textColor="#ff3f63ff"
         android:textSize="25sp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +26,7 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <!--Row One First Name -->
+        <!--Row One Workout Name -->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -38,11 +40,12 @@
                 android:fontFamily="15dp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="First Name:"
-                android:textColor="@color/tf" />
+                android:text="Workout Name"
+                android:textColor="@color/tf"
+                android:id="@+id/wNameTF" />
 
             <EditText
-                android:id="@+id/LN"
+                android:id="@+id/wName"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
@@ -50,7 +53,7 @@
 
         </LinearLayout>
 
-        <!--Row Two Last Name -->
+        <!--Row Two Workout Types -->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -64,41 +67,56 @@
                 android:fontFamily="15dp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="Last Name"
-                android:textColor="@color/tf" />
+                android:text="Workout Type"
+                android:textColor="@color/tf"
+                android:id="@+id/wTypeTF" />
 
-            <EditText
-                android:id="@+id/FN"
+            <CheckBoxGroup
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Arms"
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-        <!--Row Three Adviser -->
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Shoulders"
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Core"
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-            <TextView
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Adviser:"
-                android:textColor="@color/tf" />
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Upper Leg"
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-            <Spinner
-                android:scrollY="10dp"
-                android:id="@+id/advisers"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
-                android:spinnerMode="dropdown"/>
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Lower Leg"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+            </CheckBoxGroup>
 
         </LinearLayout>
 
@@ -117,26 +135,28 @@
                 android:text="I am here for:"
                 android:textColor="@color/tf" />
 
-            <RadioGroup
+            <CheckBoxGroup
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="@dimen/TFwidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="15dp"
                     android:text="Appointment"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-                <RadioButton
+                <CheckBox
                     android:layout_width="@dimen/TFwidth"
                     android:layout_height="wrap_content"
                     android:fontFamily="15dp"
                     android:text="Walk-in"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:checked="false" />
 
-            </RadioGroup>
+            </CheckBoxGroup>
         </LinearLayout>
 
     </LinearLayout>

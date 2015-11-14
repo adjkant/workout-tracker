@@ -8,13 +8,14 @@ import java.util.ArrayList;
 public interface Workout {
     String getName();
     WorkoutType getType();
-    WorkoutArea getArea();
+    ArrayList<WorkoutArea> getAreas();
 
     int getSetNum();
     ArrayList<Session> getSessions();
     Session getRecentSession();
 
     boolean changeName(String name);
+    boolean changeAreas(ArrayList<WorkoutArea> a);
     boolean changeSetNum(int[] setReps, int[] setWeights);
     boolean changeSetReps(int[] setReps);
     boolean changeSetWeights(int[] setWeights);

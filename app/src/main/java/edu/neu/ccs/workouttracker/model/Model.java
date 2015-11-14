@@ -12,8 +12,8 @@ public interface Model {
     ArrayList<Workout> getPowerWorkouts(WorkoutArea type);
     ArrayList<Workout> getEnduranceWorkouts(WorkoutArea type);
 
-    boolean addPowerWorkout(String name, WorkoutArea area, int[] setReps, int[] startSetWeights);
-    boolean addEnduranceWorkout(String name, WorkoutArea area, int sets, int startReps, int startWeight);
+    boolean addPowerWorkout(String name, ArrayList<WorkoutArea> area, int[] setReps, int[] startSetWeights);
+    boolean addEnduranceWorkout(String name, ArrayList<WorkoutArea> area, int sets, int startReps, int startWeight);
 
     boolean deleteWorkout(String name);
 }

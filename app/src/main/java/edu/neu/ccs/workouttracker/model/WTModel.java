@@ -51,7 +51,7 @@ public class WTModel implements Model {
         } else {
             ArrayList<Workout> validWorkouts = new ArrayList<>();
             for (Workout w : workouts) {
-                if (w.getArea() == area) {
+                if (w.getAreas().contains(area)) {
                     validWorkouts.add(w);
                 }
             }
@@ -74,12 +74,12 @@ public class WTModel implements Model {
     }
 
     @Override
-    public boolean addPowerWorkout(String name, WorkoutArea area, int[] setReps, int[] startSetWeights) {
+    public boolean addPowerWorkout(String name, ArrayList<WorkoutArea> area, int[] setReps, int[] startSetWeights) {
         return workouts.add(new BasicWorkout(name, WorkoutType.POWER, area, setReps, startSetWeights));
     }
 
     @Override
-    public boolean addEnduranceWorkout(String name, WorkoutArea area, int sets, int startReps, int startWeight) {
+    public boolean addEnduranceWorkout(String name, ArrayList<WorkoutArea> area, int sets, int startReps, int startWeight) {
         int[] setReps = new int[sets];
         int[] setWeights = new int[sets];
         for (int i = 0; i < sets; i += 1) {

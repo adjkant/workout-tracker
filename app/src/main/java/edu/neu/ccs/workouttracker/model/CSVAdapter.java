@@ -37,6 +37,53 @@ class CSVAdapter implements DataAdapter {
 
     @Override
     public boolean saveData() {
+        String workouts = "[";
+        for (Workout w : this.source) {
+            String sessions = createSessionsString(w);
+            w.getName();
+            w.getType().toString();
+            w.getAreas().toString();
+        }
         return false;
+    }
+
+    private String createSessionsString(Workout w) {
+        String sessions = "[";
+        for (Session s : w.getSessions()) {
+            String session = "[";
+            session += s.getDate().getTime();
+            session += "/";
+            session += s.getType();
+            session += "/";
+            session += s.getSetReps().length;
+            session += "/";
+
+            String reps = "[";
+            for (int i : s.getSetReps()) {
+                reps += i;
+                reps += "/";
+            }
+            reps += "]";
+
+            session += reps;
+            session += "/";
+
+            String weights = "[";
+            for (int i : s.getSetWeights()) {
+                reps += i;
+                reps += "/";
+            }
+            weights += "]";
+
+            session += weights;
+            session += "/";
+
+            session += s.getRating();
+            session += "]";
+
+            sessions += session;
+            sessions += "/";
+        }
+        return sessions;
     }
 }

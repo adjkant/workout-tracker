@@ -11,17 +11,17 @@ import edu.neu.ccs.workouttracker.exceptions.InvalidWorkoutDataException;
 class BasicWorkout implements Workout {
     private String name;
     private WorkoutType type;
-    private WorkoutArea area;
+    private ArrayList<WorkoutArea> areas;
 
     private ArrayList<Session> sessions;
 
     private int[] setReps;
     private int[] setWeights;
 
-    public BasicWorkout(String name, WorkoutType type, WorkoutArea area, int[] setReps, int[] setWeights) {
+    public BasicWorkout(String name, WorkoutType type, ArrayList<WorkoutArea> areas, int[] setReps, int[] setWeights) {
         this.name = name;
         this.type = type;
-        this.area = area;
+        this.areas = areas;
         this.setReps = setReps;
         this.setWeights = setWeights;
     }
@@ -37,8 +37,8 @@ class BasicWorkout implements Workout {
     }
 
     @Override
-    public WorkoutArea getArea() {
-        return area;
+    public ArrayList<WorkoutArea> getAreas() {
+        return areas;
     }
 
     @Override
@@ -64,6 +64,12 @@ class BasicWorkout implements Workout {
             this.name = name;
             return true;
         }
+    }
+
+    @Override
+    public boolean changeAreas(ArrayList<WorkoutArea> a) {
+        this.areas = a;
+        return true;
     }
 
     @Override
@@ -97,13 +103,11 @@ class BasicWorkout implements Workout {
         return true;
     }
 
-    // TODO
     @Override
     public boolean addSession(int[] setReps, int[] setWeights, int rating) {
         return sessions.add(new BasicSession(new Date(), this.type, setReps, setWeights, rating));
     }
 
-    // TODO
     @Override
     public boolean changeLastSession(int[] setReps, int[] setWeights, int rating) {
         sessions.remove(sessions.size() - 1);

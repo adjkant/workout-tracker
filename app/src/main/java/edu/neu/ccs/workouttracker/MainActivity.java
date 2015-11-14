@@ -10,10 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.Arrays;
 import java.util.List;
-
 import butterknife.ButterKnife;
 
 /**
@@ -22,23 +20,56 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
 
-private final string TAG = DemoButtonApp";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.activity_main);
 
-/**
-        ArrayAdapter<int> myAdapter = new ArrayAdapter<int>(
-                this,
-                android.R.layout.simple_list_item_1,myIntArray);
-
-        ListView myList = (ListView)
-                findViewById((R.id.listView);
-        myList.setAdapter(myAdapter);
- **/
+        addButtonClickListener();
     }
+
+    public void addButtonClickListener()
+    {
+        Button newWorkout = (Button)findViewById(R.id.Button);
+        newWorkout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new intent(Intent.ACTION_VIEW, ???));
+                startActivities(Intent);
+            }});
+
+        Button newWorkout = (Button)findViewById(R.id.Button2);
+        newWorkout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
+                startActivities(Intent);
+            }});
+
+        Button newWorkout = (Button)findViewById(R.id.Button3);
+        newWorkout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
+                startActivities(Intent);
+            }});
+
+        Button newWorkout = (Button)findViewById(R.id.Button4);
+        newWorkout.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
+                startActivities(Intent);
+            }});
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -62,27 +93,21 @@ private final string TAG = DemoButtonApp";
         return super.onOptionsItemSelected(item);
     }
 
-    private void setupMessageButton()
+    /* private void setupMessageButton()
     {
-    /* Set reference */
+     Set reference
         Button messageButton = (Button)findViewById(Button.generateViewId() )
 
-        /* Set click action */
+        Set click action
                 messageButton.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View view) {
                         Log (("TAG", "You clicked the button");
 
-
                         Toast.makeText(MainActivity.this, "You clicked it" Toast.LENGTH_LONG)
                                 .show();
-                        )
-                    }
-                });
+                        )}});
+      */
 
-    }
-
-    }
-
-}
+    }}}

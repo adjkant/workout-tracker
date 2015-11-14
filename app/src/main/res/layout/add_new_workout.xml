@@ -40,70 +40,139 @@
 
         </LinearLayout>
 
-        <!--Row Two Last Name -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="match_parent"
+            android:fontFamily="15dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Workout Type"
+            android:textColor="@color/tf"
+            android:id="@+id/wTypeTF"
+            android:layout_gravity="top" />
+
+        <!--All checkboxes-->
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:paddingTop="20dp"
+            android:id="@+id/types"
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
+            <CheckBox
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:fontFamily="15dp"
-                android:paddingBottom="20dp"
-                android:paddingTop="20dp"
-                android:text="Last Name"
-                android:textColor="@color/tf" />
+                android:text="Arms"
+                android:textColor="@color/black"
+                android:id="@+id/arms" />
 
-            <EditText
-                android:id="@+id/FN"
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
-
-        </LinearLayout>
-
-        <!--Row Three Adviser -->
-
-        <!--Row Four Appointment -->
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
+            <CheckBox
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:fontFamily="15dp"
-                android:text="I am here for:"
-                android:textColor="@color/tf" />
+                android:text="Shoulders"
+                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:id="@+id/shoulders" />
 
-            <RadioGroup
+            <CheckBox
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:fontFamily="15dp"
+                android:text="Core"
+                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:id="@+id/core" />
 
-                <RadioButton
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Appointment"
-                    android:textColor="@color/black" />
+            <CheckBox
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Upper Leg"
+                android:textColor="@color/black" />
+                android:text="Upper Legs"
+                android:textColor="@color/black"
+                android:id="@+id/upper" />
 
-                <RadioButton
-                    android:layout_width="@dimen/TFwidth"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="15dp"
-                    android:text="Walk-in"
-                    android:textColor="@color/black"/>
+            <CheckBox
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Lower Leg"
+                android:textColor="@color/black" />
+                android:text="Lower Legs"
+                android:textColor="@color/black"
+                android:id="@+id/lower" />
 
-            </RadioGroup>
-        </LinearLayout>
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Row Three Power vs. Endurance -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Power"
+            android:textColor="@color/blue"
+            android:id="@+id/PowerButton"/>
+
+        <Button
+            android:layout_width="@dimen/TFwidth"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="Endurance"
+            android:id="@+id/EnduranceButton"/>
+
+    </LinearLayout>
+
+    <!-- if Power is selected-->
+    <LinearLayout
+        android:layout_width="@dimen/TFwidth"
+        android:layout_height="match_parent"
+        android:id="@+id/power"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="your last weights were"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- if Endurance is selected-->
+    <LinearLayout
+        android:layout_width="@dimen/TFwidth"
+        android:layout_height="match_parent"
+        android:id="@+id/endurance"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="your last weights were"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

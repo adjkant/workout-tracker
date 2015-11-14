@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEW WORKOUT SESSION"
-        android:id="@+id/radioButton"
+        android:id="@+id/Button"
         android:checked="false"
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
@@ -30,9 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CREATE NEW WORKOUT "
-        android:id="@+id/radioButton2"
+        android:id="@+id/Button2"
         android:checked="false"
-        android:layout_below="@+id/radioButton"
+        android:layout_below="@+id/Button"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -40,14 +40,14 @@
         android:layout_height="wrap_content"
         android:text="Track Progress"
         android:id="@+id/button"
-        android:layout_below="@+id/radioButton2"
+        android:layout_below="@+id/Button2"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHECK PROGRESS"
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true" />
 
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="LIST OF WORKOUTS"
         android:id="@+id/button4"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/button3"
         android:layout_centerHorizontal="true" />
 
     <ImageView

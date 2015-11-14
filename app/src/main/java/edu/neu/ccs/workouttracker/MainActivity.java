@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +22,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
 
-
+private final string TAG = DemoButtonApp";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -60,9 +63,23 @@ public class MainActivity extends Activity {
     }
 
     private void setupMessageButton()
-    { // Set reference
-        Button messageButton =  new Button( )
-        // Set click action
+    {
+    /* Set reference */
+        Button messageButton = (Button)findViewById(Button.generateViewId() )
+
+        /* Set click action */
+                messageButton.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        Log (("TAG", "You clicked the button");
+
+
+                        Toast.makeText(MainActivity.this, "You clicked it" Toast.LENGTH_LONG)
+                                .show();
+                        )
+                    }
+                });
 
     }
 

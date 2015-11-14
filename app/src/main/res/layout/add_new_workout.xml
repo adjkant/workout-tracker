@@ -133,8 +133,8 @@
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
             android:text="Power"
-            android:textColor="@color/blue"
-            android:id="@+id/PowerButton"/>
+            android:id="@+id/PowerButton"
+            android:onClick="powerQuestions"/>
 
         <Button
             android:layout_width="@dimen/TFwidth"
@@ -142,6 +142,7 @@
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
             android:text="Endurance"
+            android:onClick="enduranceQuestions"
             android:id="@+id/EnduranceButton"/>
 
     </LinearLayout>
@@ -151,6 +152,7 @@
         android:layout_width="@dimen/TFwidth"
         android:layout_height="match_parent"
         android:id="@+id/power"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
@@ -166,6 +168,7 @@
         android:layout_width="@dimen/TFwidth"
         android:layout_height="match_parent"
         android:id="@+id/endurance"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView

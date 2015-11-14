@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Welcome to CCIS Advising!"
+        android:textColor="#ff3f63ff"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!--Row One First Name -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="First Name:"
+                android:textColor="@color/tf" />
+
+            <EditText
+                android:id="@+id/LN"
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+        <!--Row Two Last Name -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Last Name"
+                android:textColor="@color/tf" />
+
+            <EditText
+                android:id="@+id/FN"
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+        <!--Row Three Adviser -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="Adviser:"
+                android:textColor="@color/tf" />
+
+            <Spinner
+                android:scrollY="10dp"
+                android:id="@+id/advisers"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <!--Row Four Appointment -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="I am here for:"
+                android:textColor="@color/tf" />
+
+            <RadioGroup
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Appointment"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Walk-in"
+                    android:textColor="@color/black"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -2,6 +2,8 @@ package edu.neu.ccs.workouttracker.model;
 
 import java.util.ArrayList;
 
+import edu.neu.ccs.workouttracker.exceptions.WorkoutNotFoundException;
+
 /**
  * The model for Workout Tracker
  */
@@ -25,28 +27,58 @@ public class WTModel implements Model {
         return false;
     }
 
-    // TODO
     @Override
     public Workout getWorkout(String name) {
-        return null;
+        for (Workout w : this.workouts) {
+            if (w.getName().equals(name)) {
+                return w;
+            }
+        }
+        throw new WorkoutNotFoundException("The workout you want does not exist");
     }
 
-    // TODO
+
     @Override
     public ArrayList<Workout> getWorkouts(WorkoutArea type) {
-        return null;
+        return searchWorkoutsByArea(this.workouts, type);
     }
 
-    // TODO
     @Override
     public ArrayList<Workout> getPowerWorkouts(WorkoutArea type) {
-        return null;
+        return this.searchWorkoutsByArea(this.searchWorkoutsByType(workouts, WorkoutType.POWER), type);
     }
 
-    // TODO
     @Override
     public ArrayList<Workout> getEnduranceWorkouts(WorkoutArea type) {
-        return null;
+        return this.searchWorkoutsByArea(this.searchWorkoutsByType(workouts, WorkoutType.ENDURANCE), type);
+    }
+
+    private ArrayList<Workout> searchWorkoutsByArea(ArrayList<Workout> workouts, WorkoutArea area) {
+        if (area == null) {
+            return workouts;
+        } else {
+            ArrayList<Workout> validWorkouts = new ArrayList<>();
+            for (Workout w : workouts) {
+                if (w.getArea() == area) {
+                    validWorkouts.add(w);
+                }
+            }
+            return validWorkouts;
+        }
+    }
+
+    private ArrayList<Workout> searchWorkoutsByType(ArrayList<Workout> workouts, WorkoutType type) {
+        if (type == null) {
+            return workouts;
+        } else {
+            ArrayList<Workout> validWorkouts = new ArrayList<>();
+            for (Workout w : workouts) {
+                if (w.getType() == type) {
+                    validWorkouts.add(w);
+                }
+            }
+            return validWorkouts;
+        }
     }
 
     // TODO
@@ -61,9 +93,14 @@ public class WTModel implements Model {
         return false;
     }
 
-    // TODO
     @Override
     public boolean deleteWorkout(String name) {
+        for (int i = 0; i < this.workouts.size(); i += 1) {
+            if (workouts.get(i).getName().equals(name)) {
+                workouts.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 }

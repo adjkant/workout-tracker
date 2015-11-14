@@ -81,16 +81,20 @@ public class WTModel implements Model {
         }
     }
 
-    // TODO
     @Override
     public boolean addPowerWorkout(String name, WorkoutArea area, int[] setReps, int[] startSetWeights) {
-        return false;
+        return workouts.add(new BasicWorkout(name, WorkoutType.POWER, area, setReps, startSetWeights));
     }
 
-    // TODO
     @Override
     public boolean addEnduranceWorkout(String name, WorkoutArea area, int sets, int startReps, int startWeight) {
-        return false;
+        int[] setReps = new int[sets];
+        int[] setWeights = new int[sets];
+        for (int i = 0; i < sets; i += 1) {
+            setReps[i] = startReps;
+            setWeights[i] = startWeight;
+        }
+        return workouts.add(new BasicWorkout(name, WorkoutType.ENDURANCE, area, setReps, setWeights));
     }
 
     @Override

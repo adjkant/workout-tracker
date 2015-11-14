@@ -1,6 +1,7 @@
 package edu.neu.ccs.workouttracker.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import edu.neu.ccs.workouttracker.exceptions.InvalidWorkoutDataException;
 
@@ -41,6 +42,11 @@ class BasicWorkout implements Workout {
     }
 
     @Override
+    public int getSetNum() {
+        return setReps.length;
+    }
+
+    @Override
     public ArrayList<Session> getSessions() {
         return sessions;
     }
@@ -64,30 +70,43 @@ class BasicWorkout implements Workout {
     public boolean changeSetNum(int[] setReps, int[] setWeights) {
         if (setReps.length != setWeights.length) {
             throw new InvalidWorkoutDataException("Set reps do not match the number of set weights");
-        } else {
-            this.setReps = setReps;
-            this.setWeights = setWeights;
-            return true;
         }
+
+        this.setReps = setReps;
+        this.setWeights = setWeights;
+        return true;
     }
 
     @Override
     public boolean changeSetReps(int[] setReps) {
-        return false;
+        if (this.setReps.length != setReps.length) {
+            throw new InvalidWorkoutDataException("Incorrect amount of reps");
+        }
+
+        this.setReps = setReps;
+        return true;
     }
 
     @Override
     public boolean changeSetWeights(int[] setWeights) {
-        return false;
+        if (this.setWeights.length != setWeights.length) {
+            throw new InvalidWorkoutDataException("Incorrect amount of reps");
+        }
+
+        this.setWeights = setWeights;
+        return true;
     }
 
+    // TODO
     @Override
-    public boolean addSession(int[] setReps, int[] setWeights) {
-        return false;
+    public boolean addSession(int[] setReps, int[] setWeights, int rating) {
+        return sessions.add(new BasicSession(new Date(), this.type, setReps, setWeights, rating));
     }
 
+    // TODO
     @Override
-    public boolean changeLastSession(int[] setReps, int[] setWeights) {
-        return false;
+    public boolean changeLastSession(int[] setReps, int[] setWeights, int rating) {
+        sessions.remove(sessions.size() - 1);
+        return addSession(setReps, setWeights, rating);
     }
 }

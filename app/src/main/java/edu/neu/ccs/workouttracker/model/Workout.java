@@ -10,6 +10,7 @@ public interface Workout {
     WorkoutType getType();
     WorkoutArea getArea();
 
+    int getSetNum();
     ArrayList<Session> getSessions();
     Session getRecentSession();
 
@@ -18,6 +19,6 @@ public interface Workout {
     boolean changeSetReps(int[] setReps);
     boolean changeSetWeights(int[] setWeights);
 
-    boolean addSession(int[] setReps, int[] setWeights);
-    boolean changeLastSession(int[] setReps, int[] setWeights);
+    boolean addSession(int[] setReps, int[] setWeights, int rating);
+    boolean changeLastSession(int[] setReps, int[] setWeights, int rating);
 }

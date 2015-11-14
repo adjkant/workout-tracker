@@ -1,8 +1,5 @@
 package edu.neu.ccs.workouttracker.model;
 
-import android.database.sqlite.SQLiteDatabase;
-
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 /**

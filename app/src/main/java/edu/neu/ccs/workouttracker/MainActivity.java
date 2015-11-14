@@ -1,6 +1,7 @@
 package edu.neu.ccs.workouttracker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -57,4 +58,14 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private void setupMessageButton()
+    { // Set reference
+        Button messageButton =  new Button( )
+        // Set click action
+
+    }
+
+    }
+
 }

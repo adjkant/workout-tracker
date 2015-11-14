@@ -60,7 +60,9 @@
             android:id="@+id/wTypeTF"
             android:layout_gravity="top" />
 
-        <Spinner
+        <!--All checkboxes-->
+
+        <LinearLayout
             android:paddingTop="20dp"
             android:id="@+id/types"
             android:layout_width="@dimen/TFwidth"
@@ -113,7 +115,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/lower" />
 
-            </Spinner>
+            </LinearLayout>
 
     </LinearLayout>
 
@@ -128,6 +130,8 @@
         <Button
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Power"
             android:textColor="@color/blue"
             android:id="@+id/PowerButton"/>
@@ -135,6 +139,8 @@
         <Button
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Endurance"
             android:id="@+id/EnduranceButton"/>
 

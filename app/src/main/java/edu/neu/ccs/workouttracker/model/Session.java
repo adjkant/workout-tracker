@@ -1,9 +1,7 @@
 package edu.neu.ccs.workouttracker.model;
 
-import java.util.ArrayList;
-
 /**
- * Represents a workout session of
+ * Represents a workout session of weights
  */
 public interface Session {
     WorkoutType getType();

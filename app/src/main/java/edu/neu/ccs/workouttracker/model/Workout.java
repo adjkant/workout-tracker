@@ -3,7 +3,7 @@ package edu.neu.ccs.workouttracker.model;
 import java.util.ArrayList;
 
 /**
- * TODO
+ * Represents a weight workout
  */
 public interface Workout {
     String getName();

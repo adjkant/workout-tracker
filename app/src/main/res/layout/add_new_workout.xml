@@ -40,7 +40,7 @@
 
         </LinearLayout>
 
-        <!--Row Two Last Name -->
+        <!--Row Two Workout Type -->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -57,12 +57,53 @@
                 android:text="Last Name"
                 android:textColor="@color/tf" />
 
-            <EditText
-                android:id="@+id/FN"
+            <LinearLayout
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Arms"
+                    android:textColor="@color/black"
+                    android:id="@+id/arms" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Shoulders"
+                    android:textColor="@color/black"
+                    android:id="@+id/shoulders" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Core"
+                    android:textColor="@color/black"
+                    android:id="@+id/core" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Upper Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/upper" />
+
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Lower Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/lower" />
+
+                </LinearLayout>
 
         </LinearLayout>
 

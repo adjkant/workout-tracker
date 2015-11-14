@@ -4,27 +4,19 @@ import java.util.ArrayList;
 
 import edu.neu.ccs.workouttracker.exceptions.WorkoutNotFoundException;
 
+import android.content.Context;
+
 /**
  * The model for Workout Tracker
  */
 public class WTModel implements Model {
-    ArrayList<Workout> workouts;
+    private Context context;
+    private ArrayList<Workout> workouts = new ArrayList<>();
+    private DataAdapter data;
 
-    public WTModel() {
-        loadData();
-    }
-
-    // TODO
-    @Override
-    public boolean loadData() {
-        return false;
-    }
-
-
-    // TODO
-    @Override
-    public boolean saveData() {
-        return false;
+    public WTModel(Context c) {
+        this.context = c;
+        this.data = new CSVAdapter(workouts, context);
     }
 
     @Override

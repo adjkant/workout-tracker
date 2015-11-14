@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Represents a workout session of weights
  */
-public interface Session {
+interface Session {
     Date getDate();
     WorkoutType getType();
     int getSetNum();

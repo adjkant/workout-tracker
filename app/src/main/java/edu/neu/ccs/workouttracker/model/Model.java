@@ -7,9 +7,6 @@ import java.util.ArrayList;
  */
 public interface Model {
 
-    boolean loadData();
-    boolean saveData();
-
     Workout getWorkout(String name);
     ArrayList<Workout> getWorkouts(WorkoutArea type);
     ArrayList<Workout> getPowerWorkouts(WorkoutArea type);

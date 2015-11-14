@@ -19,9 +19,10 @@ Add new Workout screen
         Starting Reps / Set
         Starting Weights
 Current Progress / Graph
-    Popup Asking Pick "By Muscle Group" or "By Workout"
+    Popup Asking Pick:
+        "By Muscle Group" or "By Workout"
         If Workout -> Select Muscle Group -> Select Workout
-        If Muscle Group Go To Graph
+        If Muscle Group -> "Power" or "Endurance"
     Filters - Drawer (sidebar menu that pulls out and allows you to filter)
         Filter Options:
             By Muscle Group

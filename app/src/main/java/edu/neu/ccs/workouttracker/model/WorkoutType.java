@@ -3,5 +3,6 @@ package edu.neu.ccs.workouttracker.model;
 /**
  * TODO
  */
-public class PowerWorkout {
+public enum WorkoutType {
+    ENDURANCE, POWER
 }

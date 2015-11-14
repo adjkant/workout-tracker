@@ -1,0 +1,22 @@
+package edu.neu.ccs.workouttracker.model;
+
+import java.util.ArrayList;
+
+/**
+ * TODO
+ */
+public interface Model {
+
+    boolean loadData();
+    boolean saveData();
+
+    Workout getWorkout(String name);
+    ArrayList<Workout> getWorkouts(WorkoutArea type);
+    ArrayList<Workout> getPowerWorkouts(WorkoutArea type);
+    ArrayList<Workout> getEnduranceWorkouts(WorkoutArea type);
+
+    boolean addPowerWorkout(String name, WorkoutArea area, int[] setReps, int[] startSetWeights);
+    boolean addEnduranceWorkout(String name, WorkoutArea area, int sets, int startReps, int startWeight);
+
+    boolean deleteWorkout(String name);
+}

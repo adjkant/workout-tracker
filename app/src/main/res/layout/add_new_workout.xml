@@ -40,7 +40,7 @@
 
         </LinearLayout>
 
-        <!--Row Two Last Name -->
+        <!--Row Two Workout Type -->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,7 +55,8 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
                 android:text="Workout Type"
-                android:textColor="@color/tf" />
+                android:textColor="@color/tf"
+                android:id="@+id/wTypeTF" />
 
             <CheckBoxGroup
                 android:id="@+id/FN"
@@ -69,6 +70,35 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="15dp"
                     android:text="Arms"
+                    android:textColor="@color/black"
+                    android:id="@id/arms" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Shoulders"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Core"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Upper Leg"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Lower Leg"
                     android:textColor="@color/black" />
 
             </CheckBoxGroup>

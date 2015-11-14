@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public interface Session {
     WorkoutType getType();
     int getSetNum();
-    ArrayList<Integer> getSetWeights();
-    ArrayList<Integer> getSetReps();
+    int[] getSetWeights();
+    int[] getSetReps();
     int getRating();
 }

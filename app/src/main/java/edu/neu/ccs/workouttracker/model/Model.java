@@ -3,7 +3,7 @@ package edu.neu.ccs.workouttracker.model;
 import java.util.ArrayList;
 
 /**
- * TODO
+ * Represents the model of Workout Tracker and its capabilities
  */
 public interface Model {
 

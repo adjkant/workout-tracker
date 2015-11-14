@@ -8,13 +8,13 @@
 
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/topic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="Welcome to CCIS Advising!"
+        android:text="Add a new Workout"
         android:textColor="#ff3f63ff"
         android:textSize="25sp" />
 
@@ -38,11 +38,12 @@
                 android:fontFamily="15dp"
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp"
-                android:text="First Name:"
-                android:textColor="@color/tf" />
+                android:text="Workout Name"
+                android:textColor="@color/tf"
+                android:id="@+id/wnTF" />
 
             <EditText
-                android:id="@+id/LN"
+                android:id="@+id/workoutN"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"

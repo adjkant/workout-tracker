@@ -1,5 +1,4 @@
 package edu.neu.ccs.workouttracker;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

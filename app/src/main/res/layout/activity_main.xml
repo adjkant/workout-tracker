@@ -48,14 +48,6 @@
         android:layout_below="@+id/Button2"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CHECK PROGRESS"
-        android:id="@+id/Button4"
-        android:layout_below="@+id/Button3"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,16 +60,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LIST OF WORKOUTS"
-        android:id="@+id/Button5"
-        android:layout_below="@+id/Button4"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/Button4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Button3" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Button5"
+        android:layout_below="@+id/Button4"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -15,7 +15,6 @@ public class NewEmptySession extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        setContentView(R.layout.add_new_workout);
 
         final Button button = (Button) findViewById(R.id.newWorkoutButton);
         button.setOnClickListener(new View.OnClickListener() {

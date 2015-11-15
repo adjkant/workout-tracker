@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -7,44 +7,158 @@
     android:padding="20dp">
 
 
-    <Button android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id=@+id/listView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView2"
-        android:layout_alignParentTop="false"
-        android:layout_centerHorizontal="false" />
-        android:
-    </Button>
-
-
-    <android.support.v4.widget.Space android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </android.support.v4.widget.Space>
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView3" />
-
+    <!-- Screen name-->
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView4"
-        android:layout_above="@+id/listView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Add a new Workout"
+        android:textColor="#ff3f63ff"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!--Row One Workout Name -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Workout Name"
+                android:textColor="@color/tf"
+                android:id="@+id/wNameTF" />
+
+            <EditText
+                android:id="@+id/wName"
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+        </LinearLayout>
+
+        <!--Row Two Workout Types -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Workout Type"
+                android:textColor="@color/tf"
+                android:id="@+id/wTypeTF" />
+
+            <CheckBoxGroup
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Arms"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Shoulders"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Core"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Upper Leg"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Lower Leg"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+            </CheckBoxGroup>
+
+        </LinearLayout>
+
+        <!--Row Four Appointment -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:fontFamily="15dp"
+                android:text="I am here for:"
+                android:textColor="@color/tf" />
+
+            <CheckBoxGroup
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Appointment"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Walk-in"
+                    android:textColor="@color/black"
+                    android:checked="false" />
+
+            </CheckBoxGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

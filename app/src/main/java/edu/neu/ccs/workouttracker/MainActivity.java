@@ -5,13 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.Toast;
+
 import java.util.Arrays;
 import java.util.List;
+
 import butterknife.ButterKnife;
 
 /**
@@ -24,7 +21,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.activity_main);
+        setContentView(R.layout.main);
 
         addButtonClickListener();
     }
@@ -93,21 +90,15 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    /* private void setupMessageButton()
-    {
-     Set reference
-        Button messageButton = (Button)findViewById(Button.generateViewId() )
 
-        Set click action
-                messageButton.setOnClickListener(new View.OnClickListener() {
+    public void enduranceQuestions(View view) {
+        // view the endurance questions
+        LinearLayout endQuestions = (LinearLayout) findViewById(R.id.endurance);
 
-                    @Override
-                    public void onClick(View view) {
-                        Log (("TAG", "You clicked the button");
+    }
 
-                        Toast.makeText(MainActivity.this, "You clicked it" Toast.LENGTH_LONG)
-                                .show();
-                        )}});
-      */
-
-    }}}
+    public void powerQuestions(View view) {
+        // view the endurance questions
+        LinearLayout powerQuestions = (LinearLayout) findViewById(R.id.power);
+    }
+}

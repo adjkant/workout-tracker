@@ -1,10 +1,12 @@
 package edu.neu.ccs.workouttracker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 /**
@@ -19,6 +21,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setContentView(R.layout.add_new_workout);
+
+        final Button button = (Button) findViewById(R.id.newWorkoutButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent addNewOutfit = new Intent(getApplicationContext(), AddNewWorkoutActivity.class);
+                startActivity(addNewOutfit);
+            }
+
+        });
 
     }
 
@@ -56,4 +68,6 @@ public class MainActivity extends Activity {
         // view the endurance questions
         LinearLayout powerQuestions = (LinearLayout) findViewById(R.id.power);
     }
+
+
 }

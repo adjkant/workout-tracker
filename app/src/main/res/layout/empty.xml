@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add New Workout"
-        android:id="@+id/button7"
+        android:id="@+id/newWorkoutButton"
         android:layout_gravity="center_horizontal"
         android:textSize="30dp"
         android:background="#cccccc" />

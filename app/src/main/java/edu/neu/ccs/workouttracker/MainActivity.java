@@ -9,11 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import java.util.Arrays;
-import java.util.List;
-
-import butterknife.ButterKnife;
-
 /**
  * Created by NJ on 11/14/15.
  */

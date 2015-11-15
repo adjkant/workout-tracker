@@ -19,9 +19,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         setContentView(R.layout.add_new_workout);
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -46,14 +44,5 @@ public class MainActivity extends Activity {
     }
 
 
-    public void enduranceQuestions(View view) {
-        // view the endurance questions
-        LinearLayout endQuestions = (LinearLayout) findViewById(R.id.endurance);
 
-    }
-
-    public void powerQuestions(View view) {
-        // view the endurance questions
-        LinearLayout powerQuestions = (LinearLayout) findViewById(R.id.power);
-    }
 }

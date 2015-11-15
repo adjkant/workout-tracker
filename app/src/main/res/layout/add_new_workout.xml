@@ -142,7 +142,6 @@
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
             android:text="Endurance"
-            android:onClick="enduranceQuestions"
             android:id="@+id/EnduranceButton"/>
 
     </LinearLayout>
@@ -153,13 +152,15 @@
         android:layout_height="match_parent"
         android:id="@+id/power"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="your last weights were"
-            android:visibility="gone"/>
+            />
 
     </LinearLayout>
 
@@ -169,7 +170,8 @@
         android:layout_height="match_parent"
         android:id="@+id/endurance"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="match_parent"

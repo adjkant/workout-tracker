@@ -21,11 +21,9 @@ public class NewEmptySession extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                Intent addNewWorkout = new Intent(getApplicationContext(), AddNewWorkoutActivity.class);
+                Intent addNewWorkout = new Intent(NewEmptySession.this, AddNewWorkoutActivity.class);
                 startActivity(addNewWorkout);
             }
-
         });
-
     }
 }

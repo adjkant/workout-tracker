@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
 
     public void addButtonClickListener()
     {
-        Button newWorkout = (Button)findViewById(R.id.Button);
-        newWorkout.setOnClickListener(new View.OnClickListener() {
+        Button newWorkoutSesh = (Button)findViewById(R.id.Button);
+        newWorkoutSesh.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -48,8 +48,8 @@ public class MainActivity extends Activity {
                 startActivities(Intent);
             }});
 
-        Button newWorkout = (Button)findViewById(R.id.Button3);
-        newWorkout.setOnClickListener(new View.OnClickListener() {
+        Button newProgress = (Button)findViewById(R.id.Button3);
+        newProgress.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -58,8 +58,8 @@ public class MainActivity extends Activity {
                 startActivities(Intent);
             }});
 
-        Button newWorkout = (Button)findViewById(R.id.Button4);
-        newWorkout.setOnClickListener(new View.OnClickListener() {
+        Button checkProgress = (Button)findViewById(R.id.Button4);
+        checkProgress.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {

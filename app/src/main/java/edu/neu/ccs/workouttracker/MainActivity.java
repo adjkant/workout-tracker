@@ -12,13 +12,18 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+    Button newWorkoutSesh;
+    Button newWorkout;
+    Button trackProgress;
+    Button workoutList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_main);
 
-        //  Workout Session Button
-        final Button newWorkoutSesh = (Button)findViewById(R.id.Button);
+        // Workout Session Button
+        final Button newWorkoutSesh = (Button) findViewById(R.id.Button);
         newWorkoutSesh.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -28,7 +33,7 @@ public class MainActivity extends Activity {
         });
 
         //  Create New Workout Button
-        final Button newWorkout = (Button)findViewById(R.id.Button2);
+        final Button newWorkout = (Button) findViewById(R.id.Button2);
         newWorkout.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -36,8 +41,9 @@ public class MainActivity extends Activity {
                 startActivity(newWork);
             }
         });
+
         //  Track Progress Button
-        final Button trackProgress = (Button)findViewById(R.id.Button3);
+        final Button trackProgress = (Button) findViewById(R.id.Button3);
         trackProgress.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -47,14 +53,16 @@ public class MainActivity extends Activity {
         });
 
         //  Workout List Button
-        final Button workoutList = (Button)findViewById(R.id.Button4);
+        final Button workoutList = (Button) findViewById(R.id.Button4);
         workoutList.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent workList = new Intent(MainActivity.this, NewEmptySession.class);
                 startActivity(workList);
             }
-        });}}
+        });
+    }
+}
 
         /**
         @Override

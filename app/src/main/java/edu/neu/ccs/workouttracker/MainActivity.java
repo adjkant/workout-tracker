@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 /**
  * Created by NJ on 11/14/15.
@@ -41,5 +43,17 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void enduranceQuestions(View view) {
+        // view the endurance questions
+        LinearLayout endQuestions = (LinearLayout) findViewById(R.id.endurance);
+
+    }
+
+    public void powerQuestions(View view) {
+        // view the endurance questions
+        LinearLayout powerQuestions = (LinearLayout) findViewById(R.id.power);
     }
 }

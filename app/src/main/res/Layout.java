@@ -8,6 +8,8 @@ public class Layout {
         return ourInstance;
     }
 
-    private Layout() {
+    private Layout()
+    {
+
     }
 }

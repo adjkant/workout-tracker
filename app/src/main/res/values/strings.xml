@@ -4,7 +4,9 @@
     <string name="configure">Configure</string>
     <string name="add_widget">Add widget</string>
     <string name="new_session">New Session</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="workout_view">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_workoutlist">workoutlistActivity</string>
+    <string name="s">Great Job!</string>
 </resources>
 

@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,24 +32,24 @@ public class MainActivity extends Activity {
     public void addButtonClickListener()
     {
         Button newWorkoutSesh = (Button)findViewById(R.id.Button);
-        newWorkoutSesh.setOnClickListener(new View.OnClickListener() {
+        newWorkoutSesh.setOnClickListener(new View.OnClickListener()); {
+
+            @Override
+            public void onClick(View View) {
+
+                Intent intent = new intent());
+                startActivities(Intent);
+            }});
+
+        Button newWorkout = (Button)findViewById(R.id.Button2) {
+        newWorkout.setOnClickListener(new View.OnClickListener(); {
 
             @Override
             public void onClick(View view) {
 
-                Intent intent = new intent(Intent.ACTION_VIEW, ???));
+                Intent intent = new intent( );
                 startActivities(Intent);
-            }});
-
-        Button newWorkout = (Button)findViewById(R.id.Button2);
-        newWorkout.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
-                startActivities(Intent);
-            }});
+            }}});
 
         Button newProgress = (Button)findViewById(R.id.Button3);
         newProgress.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +57,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
+                Intent intent = new intent(Intent.ACTION_VIEW());
                 startActivities(Intent);
             }});
 
@@ -64,9 +67,9 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new intent(Intent.ACTION_VIEW,  ??? ));
+                Intent intent = new intent());
                 startActivities(Intent);
-            }});
+            }})
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,15 +93,14 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    public void enduranceQuestions(View view) {
+    public void enduranceQuestions(View view)
+    {
         // view the endurance questions
         LinearLayout endQuestions = (LinearLayout) findViewById(R.id.endurance);
-
     }
 
     public void powerQuestions(View view) {
         // view the endurance questions
         LinearLayout powerQuestions = (LinearLayout) findViewById(R.id.power);
     }
-}
+}}}

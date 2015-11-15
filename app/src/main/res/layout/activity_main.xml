@@ -77,7 +77,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_alignParentStart="true"
-        android:src="http://iconshow.me/media/images/ui/ios7-icons/png/256/plus-outline.png"
         android:layout_below="@+id/Button5"
         android:layout_centerHorizontal="true" />
 

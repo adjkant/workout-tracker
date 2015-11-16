@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         newWorkoutSesh.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                //need an if to check if
                 Intent newSesh = new Intent(MainActivity.this, NewEmptySession.class);
                 startActivity(newSesh);
             }

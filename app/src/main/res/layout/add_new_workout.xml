@@ -127,6 +127,8 @@
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- Power Button-->
+
         <Button
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
@@ -136,13 +138,16 @@
             android:id="@+id/PowerButton"
             android:onClick="powerQuestions"/>
 
+        <!-- Endurance Button-->
+
         <Button
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
             android:paddingBottom="20dp"
             android:paddingTop="20dp"
             android:text="Endurance"
-            android:id="@+id/EnduranceButton"/>
+            android:id="@+id/EnduranceButton"
+            android:onClick="enduranceQuestions"/>
 
     </LinearLayout>
 
@@ -150,7 +155,7 @@
     <LinearLayout
         android:layout_width="@dimen/TFwidth"
         android:layout_height="match_parent"
-        android:id="@+id/power"
+        android:id="@+id/powerLayout"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
@@ -159,7 +164,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="your last weights were"
+            android:text="Power was selected"
             />
 
     </LinearLayout>
@@ -168,7 +173,7 @@
     <LinearLayout
         android:layout_width="@dimen/TFwidth"
         android:layout_height="match_parent"
-        android:id="@+id/endurance"
+        android:id="@+id/enduranceLayout"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone">
@@ -176,8 +181,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="your last weights were"
-            android:visibility="gone"/>
+            android:text="endurance was selected" />
 
     </LinearLayout>
 

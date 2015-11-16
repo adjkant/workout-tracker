@@ -18,9 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".AddNewWorkoutActivity"
             android:label="newWorkout"/>
+        <activity
+            android:name=".NewEmptySession"
+            android:label="newEmptySession"/>
+        <activity
+            android:name=".NewSession"
+            android:label="newSession"/>
 
     </application>
 

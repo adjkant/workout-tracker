@@ -41,144 +41,154 @@
         </LinearLayout>
 
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="@dimen/TFwidth"
-            android:layout_height="match_parent"
-            android:fontFamily="15dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Workout Type"
-            android:textColor="@color/tf"
-            android:id="@+id/wTypeTF"
-            android:layout_gravity="top" />
-
-        <!--All checkboxes-->
+        <!--Row two Workout type -->
 
         <LinearLayout
-            android:paddingTop="20dp"
-            android:id="@+id/types"
-            android:layout_width="@dimen/TFwidth"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <CheckBox
+            <TextView
+                android:layout_width="@dimen/TFwidth"
+                android:layout_height="match_parent"
+                android:fontFamily="15dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Workout Type"
+                android:textColor="@color/tf"
+                android:id="@+id/wTypeTF"
+                android:layout_gravity="top" />
+
+            <!--All checkboxes-->
+
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:id="@+id/types"
                 android:layout_width="@dimen/TFwidth"
                 android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Arms"
-                android:textColor="@color/black"
-                android:id="@+id/arms" />
+                android:orientation="vertical">
 
-            <CheckBox
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Arms"
+                    android:textColor="@color/black"
+                    android:id="@+id/arms" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Shoulders"
+                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:id="@+id/shoulders" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Core"
+                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:id="@+id/core" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Upper Leg"
+                    android:textColor="@color/black" />
+                    android:text="Upper Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/upper" />
+
+                <CheckBox
+                    android:layout_width="@dimen/TFwidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="15dp"
+                    android:text="Lower Leg"
+                    android:textColor="@color/black" />
+                    android:text="Lower Legs"
+                    android:textColor="@color/black"
+                    android:id="@+id/lower" />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Row Three Power vs. Endurance -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Power Button-->
+
+            <Button
                 android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Shoulders"
-                android:textColor="@color/black" />
-                android:textColor="@color/black"
-                android:id="@+id/shoulders" />
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Power"
+                android:id="@+id/PowerButton"
+                android:onClick="powerQuestions"/>
 
-            <CheckBox
+            <!-- Endurance Button-->
+
+            <Button
                 android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Core"
-                android:textColor="@color/black" />
-                android:textColor="@color/black"
-                android:id="@+id/core" />
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Endurance"
+                android:id="@+id/EnduranceButton"
+                android:onClick="enduranceQuestions"/>
 
-            <CheckBox
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Upper Leg"
-                android:textColor="@color/black" />
-                android:text="Upper Legs"
-                android:textColor="@color/black"
-                android:id="@+id/upper" />
+        </LinearLayout>
 
-            <CheckBox
-                android:layout_width="@dimen/TFwidth"
-                android:layout_height="wrap_content"
-                android:fontFamily="15dp"
-                android:text="Lower Leg"
-                android:textColor="@color/black" />
-                android:text="Lower Legs"
-                android:textColor="@color/black"
-                android:id="@+id/lower" />
-
-            </LinearLayout>
-
-    </LinearLayout>
-
-    <!--Row Three Power vs. Endurance -->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
+        <!-- if Power is selected-->
+        <LinearLayout
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Power"
-            android:id="@+id/PowerButton"
-            android:onClick="powerQuestions"/>
+            android:id="@+id/powerLayout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
 
-        <Button
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Power was selected"
+                />
+
+        </LinearLayout>
+
+        <!-- if Endurance is selected-->
+        <LinearLayout
             android:layout_width="@dimen/TFwidth"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:text="Endurance"
-            android:id="@+id/EnduranceButton"/>
+            android:id="@+id/enduranceLayout"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="endurance was selected" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <!-- if Power is selected-->
-    <LinearLayout
-        android:layout_width="@dimen/TFwidth"
-        android:layout_height="match_parent"
-        android:id="@+id/power"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        android:visibility="gone">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="your last weights were"
-            />
-
-    </LinearLayout>
-
-    <!-- if Endurance is selected-->
-    <LinearLayout
-        android:layout_width="@dimen/TFwidth"
-        android:layout_height="match_parent"
-        android:id="@+id/endurance"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="your last weights were"
-            android:visibility="gone"/>
-
-    </LinearLayout>
 
 </LinearLayout>
